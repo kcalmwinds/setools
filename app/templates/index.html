@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SETools</title>
+    <link rel="stylesheet" href="static\total_style.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <nav>
+            <h1>SETools</h1>
+        </nav>
+    </div>
+    <div class="split left">
+        <h1>Input</h1><br>
+        <form>
+            <label for="summaryInput">Summary</label><br>
+            <textarea rows="5" cols="70" wrap="hard" " id="summaryInput" type="text"
+                onkeyup="updateOut()"></textarea><br>
+            <label for="currentActionInput">Current Action</label><br>
+            <textarea rows="5" cols="70" size="70" wrap="hard" id="currentActionInput" type="text"
+                onkeyup="updateOut()"></textarea><br>
+            <label for="nextActionInput">Next Action</label><br>
+            <textarea rows="5" cols="70" size="70" wrap="hard" id="nextActionInput" type="text"
+                onkeyup="updateOut()"></textarea><br>
+            <label for="nextContactInput">Next Contact</label><br>
+            <input rows="5" cols="70" size="70" wrap="hard" id="nextContactInput" type="date"
+                onchange="updateOut()"></input><br>
+
+        </form>
+        <button id="resetForm" onclick="resetForm()">Reset</button>
+
+
+    </div>
+    <div class="split right">
+        <h1> Output</h1><br>
+        <button id=copyButton onclick="copyToClipboard()">Copy to Clipboard</button>
+        <p id="resultsOut" on="updateOut()"></p>
+        <button id=copyButton onclick="copyToClipboard()">Copy to Clipboard</button>
+
+    </div>
+
+    <script src="static/summaryFunc.js"></script>
+
+</body>
+<footer></footer>
+
+</html>
